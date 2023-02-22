@@ -123,7 +123,7 @@
 
   </table>
   <pre></pre>
-  <h4>Class average of ${heading} is ${average}</h4>
+  <h4>Class average of ${heading} is ${average} and Average Percentage is ${percentage} %</h4>
 <pre></pre>
   <div class="line-1"></div>
 

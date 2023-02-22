@@ -49,7 +49,7 @@ HttpResponse<JsonNode> response1 = Unirest.get("http://127.0.0.1:8080/getSemeste
     classAverage+=array.getJSONObject(item).getInt("total");
  }
  classAverage=classAverage/data_count;
-
+ float classAvgPercentage = classAverage/3;
  System.out.println(arrayList+" "+classAverage+" "+data_count+" "+classAverage/data_count);
 
 
@@ -85,6 +85,7 @@ HttpResponse<JsonNode> response1 = Unirest.get("http://127.0.0.1:8080/getSemeste
         modelMap.addAttribute("data_count",data_count);
         modelMap.addAttribute("data_count3",data_count3);
         modelMap.addAttribute("heading","Semester 1");
+        modelMap.addAttribute("percentage", classAvgPercentage);
         modelMap.addAttribute("average", classAverage);
         modelMap.addAttribute("array1",arrayList1);
         modelMap.addAttribute("data_count1",data_count1);
@@ -108,6 +109,7 @@ HttpResponse<JsonNode> response1 = Unirest.get("http://127.0.0.1:8080/getSemeste
     classAverage+=array.getJSONObject(item).getInt("total");
  }
  classAverage=classAverage/data_count;
+ float classAvgPercentage = classAverage/3;
 
 
  HttpResponse<JsonNode> response3 = Unirest.get("http://127.0.0.1:8080/getLeaderBoard").asJson();
@@ -141,6 +143,7 @@ HttpResponse<JsonNode> response1 = Unirest.get("http://127.0.0.1:8080/getSemeste
         modelMap.addAttribute("data_count",data_count);
         modelMap.addAttribute("data_count3",data_count3);
         modelMap.addAttribute("average", classAverage);
+        modelMap.addAttribute("percentage", classAvgPercentage);
         modelMap.addAttribute("heading","Semester 2");
         modelMap.addAttribute("array1",arrayList1);
         modelMap.addAttribute("data_count1",data_count1);
